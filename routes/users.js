@@ -69,6 +69,7 @@ router.delete('/:id', async (req,res) => {
 router.get('/:id', async(req, res) => {
     try {
         const user = await User.findById(req.params.id)
+        //! In request, we DO NOT want to see password and updatedAt;
         const {password, updatedAt, ...other} = user._doc;
         res.status(200).json({
             status: 'success',
@@ -80,8 +81,78 @@ router.get('/:id', async(req, res) => {
 })
 
 //! Follow User
-//! Unfollow User
+router.put('/:id/follow', async (req, res) => {
+    if(req.body.userId !== req.params.id){
+        try {
+            const user = await User.findById(req.params.id)
+            const currentUser = await User.findById(req.body.userId)
 
+            if(!user.followers.includes(req.body.userId)){
+                await user.updateOne({
+                    $push: {followers:req.body.userId}
+                })
+                await currentUser.updateOne({
+                    $push: {followings:req.params.id}
+                })
+                res.status(200).json({
+                    status: 'success',
+                    message:'User has been followed!'
+                })
+
+            }else{
+                req.status(403).json({
+                    status: 'failed',
+                    message:'You already follow this user!'
+                })
+            }
+            
+        } catch (err) {
+            return res.status(500).json(err)
+        }
+    }else{
+        res.status(403).json({
+            status: 'failed',
+            message:`You can't follow yourself.`
+        })
+    }
+})
+
+//! Unfollow User
+router.put('/:id/unfollow', async (req, res) => {
+    if(req.body.userId !== req.params.id){
+        try {
+            const user = await User.findById(req.params.id)
+            const currentUser = await User.findById(req.body.userId)
+
+            if(user.followers.includes(req.body.userId)){
+                await user.updateOne({
+                    $pull: {followers:req.body.userId}
+                })
+                await currentUser.updateOne({
+                    $pull: {followings:req.params.id}
+                })
+                res.status(200).json({
+                    status: 'success',
+                    message:'User has been unfollowed!'
+                })
+
+            }else{
+                req.status(403).json({
+                    status: 'failed',
+                    message:`You don't follow this user!`
+                })
+            }
+            
+        } catch (err) {
+            return res.status(500).json(err)
+        }
+    }else{
+        res.status(403).json({
+            status: 'failed',
+            message:`You can't follow yourself.`
+        })
+    }
+})
 
 
 module.exports = router;
