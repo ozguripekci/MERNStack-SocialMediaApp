@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const multer = require("multer");
+const router = express.Router();
+const path = require("path");
 
 const userRoute =  require("./routes/users")
 const authRoute =  require("./routes/auth")
@@ -24,6 +27,26 @@ mongoose
 })
 .then(() => {console.log('DB connection succesful...')});
 
+app.use("/images", express.static(path.join(__dirname, "public/images/")));
+
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "public/images");
+  },
+  filename: (req, file, cb) => {
+    cb(null, req.body.name);
+  },
+});
+
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  try {
+    return res.status(200).json("File uploded successfully");
+  } catch (err) {
+    console.error(err);
+  }
+});
 
 //! MIDDLEWARES
 app.use(express.json());
