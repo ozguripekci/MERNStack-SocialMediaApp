@@ -4,10 +4,6 @@ This project is build with MERN Stack tools which are;
 - ReactJS
 - NodeJs
 
-<<<<<<< HEAD
-
-
-All rights reserved.
 =======
 Review of project:
 
@@ -15,5 +11,3 @@ Review of project:
 
 All rights reserved.!
 
-
->>>>>>> 7a56e3c5947412077eb0d8587666f0c3599d822c
