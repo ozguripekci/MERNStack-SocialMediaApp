@@ -2,6 +2,7 @@ import "./sidebar.css"
 import {Stars, Chat, VideoLibrary, Group, Bookmarks, Help, Work, Event, School, Map} from "@material-ui/icons"
 import CloseFriend from "../closeFriend/CloseFriend"
 import { Users } from "../../dummyData"
+import {Link} from "react-router-dom"
 
 
 export default function Sidebar() {
@@ -14,8 +15,10 @@ export default function Sidebar() {
             <span className="sidebarListItemText">Moment</span>
           </li>
           <li className="sidebarListItem">
-            <Chat className="sidebarIcon"/>
-            <span className="sidebarListItemText">Messages</span>
+            <Link to="/messenger" style={{textDecoration:"none"}}>
+              <Chat className="sidebarIcon"/>
+              <span className="sidebarListItemText">Messenger</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <VideoLibrary className="sidebarIcon"/>

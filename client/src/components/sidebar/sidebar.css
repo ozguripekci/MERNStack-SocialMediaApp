@@ -34,6 +34,10 @@
 
 .sidebarIcon{
     margin-right: 15px;
+    cursor: pointer;
+    outline: none;
+    color: black;
+
 }
 
 .sidebarButton{
@@ -54,3 +58,7 @@
     list-style: none;
 }
 
+.sidebarListItemText{
+    outline: none;
+    color: black;
+}

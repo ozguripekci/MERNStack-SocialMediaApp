@@ -16,6 +16,12 @@ const conversationRoute = require("./routes/conversations")
 const messageRoute = require("./routes/messages")
 
 
+//! MIDDLEWARES
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(helmet());
+
+
 
 dotenv.config({ path: './config.env' });
 
@@ -52,10 +58,8 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   }
 });
 
-//! MIDDLEWARES
-app.use(express.json());
-app.use(helmet());
-app.use(morgan("common"));
+
+//! ROUTES
 
 app.use("/api/posts", postRoute) 
 app.use("/api/users", userRoute)
@@ -65,7 +69,7 @@ app.use("/api/messages", messageRoute)
 
 
 
-//! PORT
+//! SERVER
 const port = 8800;
 app.listen(port, ()=> {
     console.log(`Backend server is running on port ${port}...`);
