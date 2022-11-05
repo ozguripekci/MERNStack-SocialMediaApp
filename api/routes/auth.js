@@ -14,6 +14,8 @@ router.post("/register", async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: hashedPassword,
+      //! passwordConfirm tekrardan debug edilmesi gerekebilir...
+      passwordConfirm: hashedPassword,
     });
 
     //save user and respond

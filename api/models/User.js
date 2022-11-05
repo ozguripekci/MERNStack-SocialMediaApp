@@ -1,25 +1,44 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const validator = require('validator');
+
 
 const UserSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      require: true,
+      required: [true, 'Please provide your name!'],
       min: 3,
       max: 20,
       unique: true,
     },
     email: {
       type: String,
-      required: true,
-      max: 50,
+      required:[true, 'Please provide your email!'],
       unique: true,
+      lowercase:true,
+      //validate: [validator.isEmail, 'Please provide a valid email'],
     },
     password: {
       type: String,
-      required: true,
-      min: 6,
-    },
+      required: [true, 'Please provide a password!'],
+      minlenght: 6,
+      //! Select hata veriyor...
+      //select: false,
+    }
+    //! Su an burasi hata veriyor. bunu token ve authController refactor edildikten sonra uygulayalim.
+    ,
+    passwordConfirm: {
+      type: String,
+      required: [true, 'Please confirm your password!'],
+      validate: {
+        // This only works on CREATE and SAVE!!!
+        validator: function(el) {
+          return el === this.password;
+        },
+        message: 'Passwords are not the same!'
+      }
+    } 
+    ,
     profilePicture: {
       type: String,
       default: "",
@@ -56,6 +75,19 @@ const UserSchema = new mongoose.Schema(
       type: Number,
       enum: [1, 2, 3],
     },
+    role: {
+      type: String,
+      enum: ['user', 'ratified user', 'developer', 'moderator', 'admin'],
+      default: 'user'
+    },
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
+    active: {
+      type: Boolean,
+      default: true,
+      select: false
+    }
   },
   { timestamps: true }
 );

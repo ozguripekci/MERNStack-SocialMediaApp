@@ -16,11 +16,6 @@ const conversationRoute = require("./routes/conversations")
 const messageRoute = require("./routes/messages")
 
 
-//! MIDDLEWARES
-app.use(morgan('dev'));
-app.use(express.json());
-app.use(helmet());
-
 
 
 dotenv.config({ path: './config.env' });
@@ -57,6 +52,11 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
     console.error(err);
   }
 });
+
+//! MIDDLEWARES
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(helmet());
 
 
 //! ROUTES
