@@ -24,9 +24,7 @@ const userSchema = new mongoose.Schema(
       minlenght: 6,
       //! Select hata veriyor...
       //select: false,
-    }
-    //! Su an burasi hata veriyor. bunu token ve authController refactor edildikten sonra uygulayalim.
-    ,
+    },
     passwordConfirm: {
       type: String,
       required: [true, 'Please confirm your password!'],
