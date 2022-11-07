@@ -15,7 +15,18 @@ export default function Rightbar({ user }) {
     currentUser.followings.includes(user?.id)
   );
 
-  
+  useEffect(() => {
+    const getFriends = async () => {
+      try {
+        const friendList = await axios.get("/users/friends/" + user._id);
+        setFriends(friendList.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getFriends();
+  }, [user]);
+
   const handleClick = async () => {
     try {
       if (followed) {
@@ -33,20 +44,7 @@ export default function Rightbar({ user }) {
     } catch (err) {
     }
   };
-  
-  useEffect(() => {
-    const getFriends = async () => {
-      try {
-        const friendList = await axios.get("/users/friends/" + user._id);
-        setFriends(friendList.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getFriends();
-  }, [user]);
 
-  
   const HomeRightbar = () => {
     return (
       <>
@@ -91,7 +89,7 @@ export default function Rightbar({ user }) {
             <span className="rightbarInfoValue">
               {user.relationship === 1
                 ? "Single"
-                : user.relationship === 2
+                : user.relationship === 1
                 ? "Married"
                 : "-"}
             </span>

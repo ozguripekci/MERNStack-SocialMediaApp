@@ -15,9 +15,6 @@ const postRoute = require("./routes/posts")
 const conversationRoute = require("./routes/conversations")
 const messageRoute = require("./routes/messages")
 
-
-
-
 dotenv.config({ path: './config.env' });
 
 //! DB connection

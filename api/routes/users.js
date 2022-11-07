@@ -17,7 +17,11 @@ router.put("/:id", async (req, res) => {
       const user = await User.findByIdAndUpdate(req.params.id, {
         $set: req.body,
       });
-      res.status(200).json("Account has been updated");
+      res.status(200).json({
+        success : "success",
+        message : "Account has been updated",
+        user
+    });
     } catch (err) {
       return res.status(500).json(err);
     }
@@ -87,13 +91,13 @@ router.put("/:id/follow", async (req, res) => {
         await currentUser.updateOne({ $push: { followings: req.params.id } });
         res.status(200).json("user has been followed");
       } else {
-        res.status(403).json("you allready follow this user");
+        res.status(403).json("You already follow this user");
       }
     } catch (err) {
       res.status(500).json(err);
     }
   } else {
-    res.status(403).json("you cant follow yourself");
+    res.status(403).json("You can't follow yourself");
   }
 });
 
