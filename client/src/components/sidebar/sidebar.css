@@ -4,14 +4,14 @@
     overflow-y:scroll;
     position: sticky;
     top: 60px;
+    align-items: center;
+
 }
 
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 10px;
 }
-::-webkit-scrollbar-track{
-    background-color: aliceblue;
-}
+
 ::-webkit-scrollbar-thumb{
     background-color: rgb(231, 231, 223);
 }
@@ -24,12 +24,24 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    align-items: center;
+
 }
 
 .sidebarListItem{
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    margin-left: 60px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    text-align: center;
+}
+.sidebarListItem:hover{
+    background-color: rgba(255, 179, 0, 0.159);
+
 }
 
 .sidebarIcon{
@@ -43,13 +55,25 @@
 .sidebarButton{
     width: 150px;
     border:none;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     font-weight: 600;
+    cursor: pointer;
+    margin-left: 60px;
+    font-size: 1.4rem;
+    color: aliceblue;
+    background-color: rgb(255, 179, 0);
+}
+
+.sidebarButton:hover{
+    background-color: rgb(162, 211, 255);
+    color: black;
+    transition: .3s;
 }
 
 .sidebarHr{
     margin: 20px 0;
+
 }
 
 .sidebarFriendList{
@@ -61,4 +85,13 @@
 .sidebarListItemText{
     outline: none;
     color: black;
+    font-size: 1.2rem;
+
+}
+
+
+.rights{
+    font-size: 14px;
+    color: rgb(165, 83, 42);
+    font-weight: 500;
 }
