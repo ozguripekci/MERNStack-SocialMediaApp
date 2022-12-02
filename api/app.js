@@ -14,7 +14,7 @@ const multer = require("multer");
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 
-// Durumu göre sadece rouuter file inda kullaniriz.
+// Durumu göre sadece router file inda kullaniriz.
 const router = express.Router();
 
 // Calling Routers 
