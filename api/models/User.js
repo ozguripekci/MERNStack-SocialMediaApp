@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
+const crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 
 
 const userSchema = new mongoose.Schema(
@@ -90,7 +92,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-/* userSchema.pre('save', async function(next) {
+ userSchema.pre('save', async function(next) {
   // Only run this function if password was actually modified
   if (!this.isModified('password')) return next();
 
@@ -151,6 +153,5 @@ userSchema.methods.createPasswordResetToken = function() {
 
   return resetToken;
 };
- */
 
 module.exports = mongoose.model("User", userSchema);

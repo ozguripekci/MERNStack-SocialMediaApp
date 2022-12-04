@@ -18,6 +18,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const router = express.Router();
 
 // Calling Routers 
+//const userRoute =  require("./routes/userRoutes")
 const userRoute =  require("./routes/users")
 const authRoute =  require("./routes/auth")
 const postRoute = require("./routes/posts")

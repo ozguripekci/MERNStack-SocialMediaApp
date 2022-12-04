@@ -1,6 +1,6 @@
 import "./sidebar.css"
-import {Stars, Chat, VideoLibrary, Group, Bookmarks, Help, Work, Event, Map, ExitToApp} from "@material-ui/icons"
-import CloseFriend from "../closeFriend/CloseFriend"
+import {Stars, Chat, Group, Bookmarks, Help, Event, Map, ExitToApp} from "@material-ui/icons"
+//import CloseFriend from "../closeFriend/CloseFriend"
 import {Link} from "react-router-dom"
 
 

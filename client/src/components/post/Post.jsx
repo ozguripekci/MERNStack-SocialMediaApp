@@ -5,6 +5,8 @@ import axios from "axios";
 import { format } from "timeago.js";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import StarRating from "../rating/rating"
+
 
 export default function Post({ post }) {
   const [like, setLike] = useState(post.likes.length);
@@ -12,6 +14,7 @@ export default function Post({ post }) {
   const [user, setUser] = useState({});
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const { user: currentUser } = useContext(AuthContext);
+
 
   useEffect(() => {
     setIsLiked(post.likes.includes(currentUser._id));
@@ -61,12 +64,15 @@ export default function Post({ post }) {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <img
+
+              <StarRating onClick={likeHandler} className='likeIcon'/>
+              <br />
+{/*             <img
               className="likeIcon"
               src={`${PF}like.png`}
               onClick={likeHandler}
               alt=""
-            />
+            /> */}
             <img
               className="likeIcon"
               src={`${PF}heart.png`}
@@ -78,6 +84,7 @@ export default function Post({ post }) {
           <div className="postBottomRight">
             <span className="postCommentText">{post.comment} comments</span>
           </div>
+          
         </div>
       </div>
     </div>
