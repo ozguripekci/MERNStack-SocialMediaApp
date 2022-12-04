@@ -1,5 +1,6 @@
 import { useContext, useRef } from "react";
 import "./login.css"
+//import "./login.scss"
 import {loginCall} from "../../apiCalls"
 import {AuthContext} from "../../context/AuthContext"
 import {CircularProgress} from "@material-ui/core"
@@ -38,7 +39,7 @@ export default function Login() {
                     <button className="loginButton" type="submit" disabled={isFetching}>{isFetching ? <CircularProgress/> : "Log In"}</button>
                     <span className="loginForgot">Forgot Password?</span>
                     <button className="loginRegisterButton" type="submit">{isFetching ? <CircularProgress color="primary"/> : "Create New Account"}</button>
-
+                    
                 </form>
             </div>
 
