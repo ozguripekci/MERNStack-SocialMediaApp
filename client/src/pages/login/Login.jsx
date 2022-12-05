@@ -29,11 +29,9 @@ export default function Login() {
                 <h1 >Ratify</h1>
                 <span>Rate, what you trust!</span>
                 <span>Don't you have an account? <br /> Let's join today! </span>
-                <button type="submit" >
-                    <Link to="/register">
-                        {isFetching ? <CircularProgress color="primary"/> : "Register"}
-                    </Link>
-                </button>
+                <Link to="/register">
+                    <button>Register</button>
+                </Link>
 
             </div>
 
@@ -51,7 +49,7 @@ export default function Login() {
         </div>
     </div>
   )
-  /* OLD 
+  /*  OLD CSS WITH classnames 
     return (
     <div className="login">
 

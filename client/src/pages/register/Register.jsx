@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useRef } from "react";
-import "./register.css";
+//import "./register.css";
+import "./register.scss";
+
 import { useHistory } from "react-router";
 import {Link} from "react-router-dom"
 
@@ -33,6 +35,56 @@ export default function Register() {
     }
   };
 
+  return (
+    <div className="register">
+      <div className="loginWrapper">
+        <div className="loginLeft">
+          <h1>Ratify</h1>
+          <span>Rate, what you trust!</span>
+          <span>Do you have an account?</span>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+        </div>
+
+        <div className="loginRight">
+          <h1>Register</h1>
+          <form onSubmit={handleClick}>
+            <input
+              placeholder="Username"
+              required
+              ref={username}
+            />
+            <input
+              placeholder="Email"
+              required
+              ref={email}
+              type="email"
+            />
+            <input
+              placeholder="Password"
+              required
+              ref={password}
+              type="password"
+              minLength="6"
+            />
+            <input
+              placeholder="Password Again"
+              required
+              ref={passwordAgain}
+              type="password"
+            />
+            <button type="submit">
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+
+
+/*   OLD CSS WITH classnames 
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -86,4 +138,5 @@ export default function Register() {
       </div>
     </div>
   );
+} */
 }
