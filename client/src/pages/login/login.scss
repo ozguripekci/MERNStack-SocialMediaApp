@@ -78,10 +78,15 @@
             width: 50%;
             padding: 10px;
             border: none;
-            background-color: #938eef;
+            background-color: #625aff;
             color: white;
             font-weight: bold;
             cursor: pointer;
+          }
+          button:hover{
+            background-color: #ffbb00;
+            color: #ffffff;
+            transition:0.2s;
           }
 
           span {
