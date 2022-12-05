@@ -1,9 +1,10 @@
 import { useContext, useRef } from "react";
-import "./login.css"
-//import "./login.scss"
+//import "./login.css"
+import "./login.scss"
 import {loginCall} from "../../apiCalls"
 import {AuthContext} from "../../context/AuthContext"
 import {CircularProgress} from "@material-ui/core"
+import {Link} from "react-router-dom"
 
 
 
@@ -20,25 +21,29 @@ export default function Login() {
     }
     console.log(user);
 
-  return (
+    return (
     <div className="login">
+        {/* card */}
         <div className="loginWrapper">
             <div className="loginLeft">
-                <h3 className="loginLogo">Ratify</h3>
-                <span className="loginDesc">Rate, what you trust!</span>
-                <br /><br /><br /><br /><br /><br />
-                <p className="rights">All rights reserved.</p>
-                <p className="rights">Özgür Ipekci - 2022</p>
-
+                <h1 >Ratify</h1>
+                <span>Rate, what you trust!</span>
+                <span>Don't you have an account? <br /> Let's join today! </span>
+                <button type="submit" >
+                    <Link to="/register">
+                        {isFetching ? <CircularProgress color="primary"/> : "Register"}
+                    </Link>
+                </button>
 
             </div>
+
             <div className="loginRight">
-                <form className="loginBox" onSubmit={handleClick}>
-                    <input className="loginInput" type="email" placeholder="Email" ref={email} required  />
-                    <input className="loginInput" type="password" placeholder="Password" ref={password} required minLength="6"/>
-                    <button className="loginButton" type="submit" disabled={isFetching}>{isFetching ? <CircularProgress/> : "Log In"}</button>
-                    <span className="loginForgot">Forgot Password?</span>
-                    <button className="loginRegisterButton" type="submit">{isFetching ? <CircularProgress color="primary"/> : "Create New Account"}</button>
+                <h1>Login</h1>
+                <form onSubmit={handleClick}>
+                    <input type="email" placeholder="Email" ref={email} required  />
+                    <input type="password" placeholder="Password" ref={password} required minLength="6"/>
+                    <button type="submit" disabled={isFetching}>{isFetching ? <CircularProgress/> : "Log In"}</button>
+                    <span >Forgot Password?</span>
                     
                 </form>
             </div>
@@ -46,4 +51,31 @@ export default function Login() {
         </div>
     </div>
   )
+  /* OLD 
+    return (
+    <div className="login">
+
+        <div className="loginWrapper">
+            <div className="loginLeft">
+                <h1 className="loginLogo">Ratify</h1>
+                <span className="loginDesc">Rate, what you trust!</span>
+                <span>Don't you have an account?</span>
+                <button className="loginRegisterButton" type="submit">{isFetching ? <CircularProgress color="primary"/> : "Register"}</button>
+
+            </div>
+
+            <div className="loginRight">
+                <form className="loginBox" onSubmit={handleClick}>
+                    <h1>Login</h1>
+                    <input className="loginInput" type="email" placeholder="Email" ref={email} required  />
+                    <input className="loginInput" type="password" placeholder="Password" ref={password} required minLength="6"/>
+                    <button className="loginButton" type="submit" disabled={isFetching}>{isFetching ? <CircularProgress/> : "Log In"}</button>
+                    <span className="loginForgot">Forgot Password?</span>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+  ) */
 }
