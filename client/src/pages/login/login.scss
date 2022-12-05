@@ -20,7 +20,7 @@
           url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
             center;
         background-size: cover;
-        padding: 50px;
+        padding:130px 50px 0px 50px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -33,7 +33,7 @@
         }
   
         span {
-          font-size: 18px;
+          font-size: 16px;
         }
         
         button {
@@ -71,7 +71,7 @@
           input {
           border: none;
           border-bottom: 1px solid lightgray;
-          padding: 20px 10px;
+          padding: 15px 10px;
           }
           
           button {

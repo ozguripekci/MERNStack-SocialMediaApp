@@ -40,8 +40,7 @@ export default function Register() {
       <div className="loginWrapper">
         <div className="loginLeft">
           <h1>Ratify</h1>
-          <span>Rate, what you trust!</span>
-          <span>Do you have an account?</span>
+          <span>Rate, what you trust! <br />Do you have an account? </span>
           <Link to="/login">
             <button>Login</button>
           </Link>

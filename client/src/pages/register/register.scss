@@ -1,6 +1,6 @@
 .register {
     height: 100vh;
-    background-color: rgb(193, 190, 255);
+    background-color: rgb(225, 223, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +34,9 @@
         
   
         span {
-          font-size: 14px;
+            padding-top: 250px;
+            font-size: 16px;
+            
         }
         
         button {
@@ -45,6 +47,7 @@
           color: rebeccapurple;
           font-weight: bold;
           cursor: pointer;
+
         }
       }
   
@@ -68,17 +71,22 @@
           input {
           border: none;
           border-bottom: 1px solid lightgray;
-          padding: 20px 10px;
+          padding: 15px 10px;
           }
           
           button {
             width: 50%;
             padding: 10px;
             border: none;
-            background-color: #938eef;
+            background-color: #625aff;
             color: white;
             font-weight: bold;
             cursor: pointer;
+          }
+          button:hover{
+            background-color: #fecb25;
+            color: white;
+            transition:0.2s;
           }
         }
       }
