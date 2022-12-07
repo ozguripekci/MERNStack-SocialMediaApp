@@ -1,6 +1,16 @@
 .rightbar {
     flex: 3.5;
+    margin-left: 30px;
+    height: calc(100vh - 60px);
+    position: sticky;
+    overflow: scroll;
+    top: 60px;
+    align-items: center;
   }
+
+  ::-webkit-scrollbar{
+    display: none;
+}
   
   .rightbarWrapper {
     padding: 20px 20px 0 0;
@@ -29,6 +39,7 @@
   }
   
   .rightbarTitle{
+    
       margin-bottom: 20px;
   }
   
@@ -45,6 +56,7 @@
   }
   
   .rightbarInfo{
+
     margin-bottom: 30px;
   }
   

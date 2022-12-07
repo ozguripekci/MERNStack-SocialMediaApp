@@ -1,33 +1,37 @@
 .profile{
     display: flex;
+    flex: 5.5;
 }
 
 .profileRight{
-    flex: 9;
+    flex: 5.5;
 }
 
 .profileCover{
     height: 320px;
     position: relative;
+    top: 10px;
 }
 
 .profileCoverImg{
     width: 100%;
     height: 250px;
     object-fit: cover;
+    border: 5px solid rgb(48, 128, 179);
+    border-radius: 15px;
 }
 
 .profileUserImg{
-    width: 150px;
-    height: 150px;
+    width: 136px;
+    height: 136px;
     border-radius: 50%;
     object-fit: cover;
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    top: 150px;
-    border: 5px solid white;
+    top: 160px;
+    border: 5px solid rgb(48, 128, 179);
 }
 
 .profileInfo{

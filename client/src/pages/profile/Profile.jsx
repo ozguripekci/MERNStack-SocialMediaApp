@@ -66,17 +66,16 @@ export default function Profile() {
               <h4 className="profileInfoName">{user.username}</h4>
               <span className="profileInfoDesc">{user.desc}</span>
             </div>
-            <div className={classes.rating}><StarRating />
-                
-        </div>
+            <div className={classes.rating}>
+              <StarRating />  
+            </div>
 
           </div>
           <div className="profileRightBottom">
-            <Feed username={username} />
-            <Rightbar user={user} />
-
           </div>
+            <Feed username={username} />
         </div>
+            <Rightbar user={user} />
       </div>
     </>
   );
