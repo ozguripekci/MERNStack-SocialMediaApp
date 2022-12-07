@@ -88,7 +88,7 @@ export default function Rightbar({ user }) {
               </Link>
           </div>
         )} 
-        {user.username == currentUser.username && (
+        {user.username === currentUser.username && (
           <div>
               <Link
                 to={"/profile/" + currentUser.username}
