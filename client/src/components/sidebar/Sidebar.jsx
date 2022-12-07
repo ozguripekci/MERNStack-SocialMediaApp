@@ -46,10 +46,10 @@ export default function Sidebar() {
 
         </ul>
         <button className="sidebarButton">Ratify</button>
-        <hr className="sidebarHr"/>
+        {/* <hr className="sidebarHr"/> */}
         <div className="loginLeft">
-            <br /><br />
-            <h className="rights">All rights reserved.</h>
+            <br /><br /><br /><br /><br />
+            <h className="rights">All rights reserved!</h>
             <p className="rights">Ratify © 2022  </p>
             <p className="rights">Özgür Ipekci</p>
 
