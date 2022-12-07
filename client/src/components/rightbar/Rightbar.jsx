@@ -28,7 +28,7 @@ export default function Rightbar({ user }) {
   }, [user]);
 
   const handleClick = async () => {
-    try {
+
       if (followed) {
         await axios.put(`/users/${user._id}/unfollow`, {
           userId: currentUser._id,
@@ -41,8 +41,7 @@ export default function Rightbar({ user }) {
         dispatch({ type: "FOLLOW", payload: user._id });
       }
       setFollowed(!followed);
-    } catch (err) {
-    }
+
   };
 
   const HomeRightbar = () => {
@@ -74,24 +73,21 @@ export default function Rightbar({ user }) {
             {followed ? <Remove /> : <Add />}
           </button>
         )}
-
         {user.username !== currentUser.username && (
           <div>
-          {friends.map((friend) => (
               <Link
-                to={"/messenger/" + friend.username}
+                to={"/messenger/" + friends.username}
                 style={{ textDecoration: "none" }}
               >
-              <button className="rightbarFollowButton" onClick={handleClick}>
+              <button className="rightbarFollowButton">
                 Send Message
               </button>
                 
               </Link>
-            ))}
           </div>
-        )}
+        )} 
 
-
+          <br />
 
         <h4 className="rightbarTitle">User information</h4>
         <div className="rightbarInfo">
@@ -108,7 +104,7 @@ export default function Rightbar({ user }) {
             <span className="rightbarInfoValue">
               {user.relationship === 1
                 ? "Single"
-                : user.relationship === 1
+                : user.relationship === 2
                 ? "Married"
                 : "-"}
             </span>
