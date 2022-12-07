@@ -96,10 +96,12 @@
   }
   
   .rightbarFollowButton{
+    height: 35px;
+    width: 150px;
     margin-top: 30px;
     margin-bottom: 10px;
     border: none;
-    background-color: #1872f2;
+    background-color: rgb(166, 0, 255);
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
@@ -108,6 +110,10 @@
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+  }
+  .rightbarFollowButton:hover{
+    background-color: rgba(0, 28, 154, 0.9);
+    transition: 0.2s;
   }
   
   .rightbarFollowButton:focus{

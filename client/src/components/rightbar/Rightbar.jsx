@@ -74,6 +74,25 @@ export default function Rightbar({ user }) {
             {followed ? <Remove /> : <Add />}
           </button>
         )}
+
+        {user.username !== currentUser.username && (
+          <div>
+          {friends.map((friend) => (
+              <Link
+                to={"/messenger/" + friend.username}
+                style={{ textDecoration: "none" }}
+              >
+              <button className="rightbarFollowButton" onClick={handleClick}>
+                Send Message
+              </button>
+                
+              </Link>
+            ))}
+          </div>
+        )}
+
+
+
         <h4 className="rightbarTitle">User information</h4>
         <div className="rightbarInfo">
           <div className="rightbarInfoItem">
