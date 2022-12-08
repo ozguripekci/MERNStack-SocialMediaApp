@@ -5,8 +5,8 @@ import {FaStar} from "react-icons/fa"
 const StarRating = () => {
 
 
-    const [rating, setRating] = useState([])
-    const [hover, setHover] = useState([])
+    const [rating, setRating] = useState([3])
+    const [hover, setHover] = useState([3])
 
     
     return <div>
@@ -23,7 +23,7 @@ const StarRating = () => {
                         //radio hidden:shows only stars
                         type="radio" hidden
                         precision={0.5}
-                        name="half-rating" 
+                        name="rating" 
                         value={ratingValue} 
                         onClick={() => setRating(ratingValue)}
                         
