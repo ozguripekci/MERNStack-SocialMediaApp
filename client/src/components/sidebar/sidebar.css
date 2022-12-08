@@ -66,9 +66,9 @@
 }
 
 .sidebarButton:hover{
-    background-color: rgb(162, 211, 255);
-    color: black;
-    transition: .3s;
+    background-color: rgba(0, 28, 154, 0.9);
+    color: white;
+    transition: 0.3s;
 }
 
 .sidebarHr{

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { Add, Remove } from "@material-ui/icons";
 import SettingsIcon from '@mui/icons-material/Settings';
-import SendIcon from '@mui/icons-material/Send';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
 export default function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -82,7 +82,7 @@ export default function Rightbar({ user }) {
                 style={{ textDecoration: "none" }}
               >
               <button className="rightbarFollowButton">
-                Send Message <span><SendIcon/></span>
+                Send Message <span><EmailOutlinedIcon/></span>
               </button>
                 
               </Link>

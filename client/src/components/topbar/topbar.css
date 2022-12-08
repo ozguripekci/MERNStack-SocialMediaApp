@@ -102,3 +102,7 @@
     border: 2px solid white;
     background-color: white;
 }
+.topbarImg:hover{
+    opacity: 0.9;
+    filter: grayscale(30%);
+}

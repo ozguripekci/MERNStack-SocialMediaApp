@@ -90,10 +90,16 @@
   }
   
   .rightbarFollowingImg{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
+    border: 2px solid rgba(0, 28, 154, 0.9);
+    background-color: rgba(0, 28, 154, 0.9);
+  }
+  .rightbarFollowingImg:hover{
+    opacity: 0.9;
+    filter: grayscale(30%);
   }
   
   .rightbarFollowButton{

@@ -67,12 +67,27 @@
       border: none;
       padding: 7px;
       border-radius: 5px;
-      background-color: green;
+      background-color: rgba(0, 28, 154, 0.9);
       font-weight: 500;
       margin-right: 20px;
       cursor: pointer;
       color: white;
+      text-align: center;
+      align-items: center;
+      font-size: 16px;
+      display:flex ;
   }
+
+  .shareText{
+    padding-right: 10px;
+  }
+
+  .shareButton:hover{
+    background-color: rgb(166, 0, 255);
+    color: white;
+    transition: 0.3s;
+  }
+
   
   .shareImgContainer{
     padding: 0 20px 10px 20px;
