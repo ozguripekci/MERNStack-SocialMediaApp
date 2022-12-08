@@ -99,4 +99,6 @@
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
+    border: 2px solid white;
+    background-color: white;
 }
