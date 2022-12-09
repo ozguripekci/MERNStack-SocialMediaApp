@@ -32,8 +32,10 @@ export default function Sidebar() {
             <span className="sidebarListItemText">Events</span>
           </li>
           <li className="sidebarListItem">
-            <Map className="sidebarIcon"/>
-            <span className="sidebarListItemText">Globe</span>
+            <Link to="/map" style={{textDecoration:"none"}}>
+              <Map className="sidebarIcon"/>
+              <span className="sidebarListItemText">Globe</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Help className="sidebarIcon"/>
