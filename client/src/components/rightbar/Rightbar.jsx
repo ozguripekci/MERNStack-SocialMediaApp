@@ -8,6 +8,8 @@ import { AuthContext } from "../../context/AuthContext";
 import { Add, Remove } from "@material-ui/icons";
 import SettingsIcon from '@mui/icons-material/Settings';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
+
 
 export default function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -83,6 +85,19 @@ export default function Rightbar({ user }) {
               >
               <button className="rightbarFollowButton">
                 Send Message <span><EmailOutlinedIcon/></span>
+              </button>
+                
+              </Link>
+          </div>
+        )}
+        {user.username !== currentUser.username && (
+          <div>
+              <Link
+                to={"/map/" + friends.location}
+                style={{ textDecoration: "none" }}
+              >
+              <button className="rightbarFollowButton">
+                See Location <span><PersonPinCircleIcon/></span>
               </button>
                 
               </Link>

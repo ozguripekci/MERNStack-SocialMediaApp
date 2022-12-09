@@ -1,5 +1,12 @@
 .map{
-    height: 80%;
+    height: 700px;
     width: auto;
 }
+
+.mapboxgl-canvas {
+    left: 0;
+  }
+
+
+
 
