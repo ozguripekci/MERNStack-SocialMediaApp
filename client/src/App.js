@@ -11,7 +11,7 @@ import {
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import Messenger from "./pages/messenger/Messenger";
-import Map from "./pages/map/Map"
+import MyMap from "./pages/map/Map"
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -29,7 +29,7 @@ function App() {
           {!user ? <Redirect to="/" /> : <Messenger />}
         </Route>
         <Route path="/map">
-          {!user ? <Redirect to="/" /> : <Map />}
+          {!user ? <Redirect to="/" /> : <MyMap />}
         </Route>
         <Route path="/profile/:username">
           <Profile />
