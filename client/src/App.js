@@ -32,8 +32,9 @@ function App() {
           {!user ? <Redirect to="/" /> : <MyMap />}
         </Route>
         <Route path="/profile/:username">
-          <Profile />
+          {user ? <Profile /> : <Redirect to="/login" /> }
         </Route>
+
       </Switch>
     </Router>
   );

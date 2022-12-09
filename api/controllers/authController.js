@@ -86,6 +86,8 @@ exports.logout = (req,res) => {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true
   })
+  res.clearCookie()
+  req.session.destroy();
   res.status(200).json({
     success: 'success',
     message: 'You succesfully logout!'

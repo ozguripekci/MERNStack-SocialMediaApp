@@ -2,9 +2,21 @@ import "./sidebar.css"
 import {Stars, Chat, Group, Bookmarks, Help, Event, Map, ExitToApp} from "@material-ui/icons"
 //import CloseFriend from "../closeFriend/CloseFriend"
 import {Link} from "react-router-dom"
+import { useState, useEffect } from "react";
 
 
 export default function Sidebar() {
+  const myStorage = window.localStorage;
+  const [user, setUser] = useState(myStorage.getItem("user"));
+
+  
+    const handleLogout = () => {
+      setUser(null);
+      myStorage.removeItem("user");
+      window.location.reload()
+    };
+ 
+
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -41,9 +53,11 @@ export default function Sidebar() {
             <Help className="sidebarIcon"/>
             <span className="sidebarListItemText">Help</span>
           </li>
-          <li className="sidebarListItem">
-            <ExitToApp className="sidebarIcon"/>
-            <span className="sidebarListItemText">Logout</span>
+          <li className="sidebarListItem" >
+            
+              <ExitToApp className="sidebarIcon"/>
+              <span className="sidebarListItemText" onClick={handleLogout}>Logout</span>
+            
           </li>
 
         </ul>
