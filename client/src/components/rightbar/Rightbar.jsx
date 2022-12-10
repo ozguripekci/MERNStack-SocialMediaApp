@@ -69,7 +69,7 @@ export default function Rightbar({ user }) {
       </>
     );
   };
-
+  
   const ProfileRightbar = () => {
     return (
       <>
@@ -146,15 +146,15 @@ export default function Rightbar({ user }) {
         <div className="rightbarFollowings">
           {friends.map((friend) => (
             <Link
-              to={"/profile/" + friend.username}
+            to={"/profile/" + friend.username}
               style={{ textDecoration: "none" }}
             >
               <div className="rightbarFollowing">
                 <img
                   src={
                     friend.profilePicture
-                      ? PF + friend.profilePicture
-                      : PF + "person/noAvatar.png"
+                    ? PF + friend.profilePicture
+                    : PF + "person/noAvatar.png"
                   }
                   alt=""
                   className="rightbarFollowingImg"
@@ -164,7 +164,13 @@ export default function Rightbar({ user }) {
             </Link>
           ))}
         </div>
+        <html>
+
+          {/* Calismiyor su anda Buy me coffee */}
+            <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="ratify" data-description="Support me on Buy me a coffee!" data-message="Thank you for you support to our Ratify Team! Lets develop together..." data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18" crossorigin></script>
+        </html>
         <div >
+
           <br /><br /><br /><br />
           <h className="rightsRight"><span>Terms of Services  |  </span> About us! | <span> Team </span>  |  <span> Contact us! </span> </h>
         </div>
