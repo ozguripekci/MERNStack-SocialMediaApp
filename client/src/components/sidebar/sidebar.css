@@ -25,8 +25,14 @@
     margin: 0;
     list-style: none;
     align-items: center;
+    border: 2px solid rgba(166, 0, 255, 0.053);
+    border-radius: 10px;
 
+    -webkit-box-shadow: 0px 0px 93px -24px rgba(26,0,255,0.23);
+    -moz-box-shadow: 0px 0px 93px -24px rgba(26,0,255,0.23);
+    box-shadow: 2px 2px 50px -24px rgba(26,0,255,0.23);
 }
+
 
 .sidebarListItem{
     display: flex;
@@ -63,6 +69,7 @@
     font-size: 1.4rem;
     color: rgb(255, 255, 255);
     background-color: rgb(166, 0, 255);
+    margin-top: 15px;
 }
 
 .sidebarButton:hover{
@@ -93,6 +100,8 @@
 .rights{
     margin-left:70px;
     font-size: 14px;
-    color: rgb(0, 43, 161);
-    font-weight: 400;
+    color: grey;
+    font-weight: 300;
+    cursor: pointer;
+    text-shadow:rgba(0, 0, 255, 0.539) 1px 0 5px;
 }

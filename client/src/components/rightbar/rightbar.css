@@ -126,3 +126,14 @@
   .rightbarFollowButton:focus{
     outline: none;
   }
+
+  .rightsRight{
+    margin-left:70px;
+    font-size: 14px;
+    color: grey;
+    font-weight: 300;
+    cursor: pointer;
+    padding-bottom:20px;
+    bottom:0;
+    position: absolute;
+}

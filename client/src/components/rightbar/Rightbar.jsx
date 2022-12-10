@@ -162,6 +162,10 @@ export default function Rightbar({ user }) {
             </Link>
           ))}
         </div>
+        <div >
+          <br /><br /><br /><br />
+          <h className="rightsRight"><span>Team</span>  |  <span>Contact us!</span>  |  <span>Terms of Service  |  </span>About us! </h>
+        </div>
       </>
     );
   };
