@@ -17,28 +17,29 @@
 }
 
 .sidebarWrapper{
-    padding: 20px;
+    padding: 30px;
 }
 
 .sidebarList{
     padding: 0;
     margin: 0;
+    margin-left: 60px;
     list-style: none;
     align-items: center;
-    border: 2px solid rgba(166, 0, 255, 0.053);
+    /* border: 2px solid rgba(166, 0, 255, 0.053); */
     border-radius: 10px;
+    width: 65%;
+    margin-right: 100px;
+    -webkit-box-shadow: 0px 0px 93px -24px rgba(119, 119, 119, 0.23);
+    -moz-box-shadow: 0px 0px 93px -24px rgba(106, 106, 106, 0.23);
+    box-shadow: 2px 4px 60px -24px rgba(26,1,455,0.53);
+    border: 2px solid rgba(112, 88, 167, 0.39);
 
-    -webkit-box-shadow: 0px 0px 93px -24px rgba(26,0,255,0.23);
-    -moz-box-shadow: 0px 0px 93px -24px rgba(26,0,255,0.23);
-    box-shadow: 2px 2px 50px -24px rgba(26,0,255,0.23);
 }
 
 
 .sidebarListItem{
     display: flex;
-    margin-left: 60px;
-    margin-right: 100px;
-    margin-bottom: 10px;
     padding: 8px;
     border-radius: 10px;
     color: aliceblue;
@@ -46,8 +47,8 @@
     text-align: center;
 }
 .sidebarListItem:hover{
-    background-color: rgba(255, 179, 0, 0.159);
-
+    
+    background-color: rgba(17, 0, 255, 0.212);
 }
 
 .sidebarIcon{
@@ -63,10 +64,10 @@
     border:none;
     padding: 15px;
     border-radius: 15px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
-    margin-left: 60px;
-    font-size: 1.4rem;
+    margin-left: 80px;
+    font-size: 1.2rem;
     color: rgb(255, 255, 255);
     background-color: rgb(166, 0, 255);
     margin-top: 15px;
@@ -92,16 +93,19 @@
 .sidebarListItemText{
     outline: none;
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
 }
 
 
-.rights{
+.rightsLeft{
     margin-left:70px;
     font-size: 14px;
     color: grey;
     font-weight: 300;
     cursor: pointer;
-    text-shadow:rgba(0, 0, 255, 0.539) 1px 0 5px;
+    text-shadow:rgba(0, 0, 255, 0.439) 1px 0 5px;
+    bottom:0;
+    position: absolute;
+    padding-bottom:20px;
 }

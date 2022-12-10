@@ -52,12 +52,14 @@ export default function Rightbar({ user }) {
     return (
       <>
         <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
+          <img className="birthdayImg" src="assets/gift.png" alt=""/>
           <span className="birthdayText">
             <b>Mike Michael</b> and <b>3 other friends</b> have a birhday today.
           </span>
         </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
+        <a href="https://github.com/ozguripekci" target="_blank" rel="noreferrer noopener">
+          <img className="rightbarAd" src="assets/ad.png" alt=""/>
+        </a>
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
@@ -164,7 +166,7 @@ export default function Rightbar({ user }) {
         </div>
         <div >
           <br /><br /><br /><br />
-          <h className="rightsRight"><span>Team</span>  |  <span>Contact us!</span>  |  <span>Terms of Service  |  </span>About us! </h>
+          <h className="rightsRight"><span>Terms of Services  |  </span> About us! | <span> Team </span>  |  <span> Contact us! </span> </h>
         </div>
       </>
     );
