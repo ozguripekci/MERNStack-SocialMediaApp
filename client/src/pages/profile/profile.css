@@ -31,8 +31,8 @@
     right: 0;
     margin: auto;
     top: 160px;
-    border: 4px solid rgb(48, 128, 179);
-    background-color: rgb(252, 251, 233);
+    border: 5px solid rgb(48, 128, 179);
+    background-color: rgb(48, 128, 179);
 }
 
 .profileInfo{
@@ -52,4 +52,11 @@
 
 .profileRightBottom{
     display: flex;
+}
+
+.verifyImg{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+
 }

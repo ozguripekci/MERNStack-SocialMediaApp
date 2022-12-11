@@ -40,6 +40,7 @@ export default function Profile() {
       <Topbar />
       <div className="profile">
         <Sidebar />
+        
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
@@ -58,12 +59,15 @@ export default function Profile() {
                   user.profilePicture
                     ? PF + user.profilePicture
                     : PF + "person/noAvatar.png"
-                }
+                  }
                 alt=""
               />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">{user.username}</h4>
+              <h4 className="profileInfoName">{user.username}
+                <img className="verifyImg" src={PF + "verify.png"} alt="Ratified User" />
+              </h4>
+
               <span className="profileInfoDesc">{user.desc}</span>
             </div>
             <div className={classes.rating}>
@@ -73,7 +77,7 @@ export default function Profile() {
           </div>
           <div className="profileRightBottom">
           </div>
-            <Feed username={username} />
+            <Feed username={username}/>
         </div>
             <Rightbar user={user} />
       </div>

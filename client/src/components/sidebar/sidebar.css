@@ -30,17 +30,17 @@
     border-radius: 10px;
     width: 65%;
     margin-right: 100px;
-    -webkit-box-shadow: 0px 0px 93px -24px rgba(119, 119, 119, 0.23);
-    -moz-box-shadow: 0px 0px 93px -24px rgba(106, 106, 106, 0.23);
-    box-shadow: 2px 4px 60px -24px rgba(26,1,455,0.53);
-    border: 2px solid rgba(112, 88, 167, 0.39);
+    -webkit-box-shadow: 0px 0px 93px -24px rgb(119, 119, 119);
+    -moz-box-shadow: 0px 0px 93px -24px rgb(106, 106, 106);
+    box-shadow: 2px 4px 60px -24px rgb(76, 100, 172);
+    border: 2px solid rgba(151, 151, 151, 0.107);
 
 }
 
 
 .sidebarListItem{
     display: flex;
-    padding: 8px;
+    padding: 11px;
     border-radius: 10px;
     color: aliceblue;
     cursor: pointer;
@@ -48,7 +48,7 @@
 }
 .sidebarListItem:hover{
     
-    background-color: rgba(17, 0, 255, 0.212);
+    background-color: rgba(178, 89, 226, 0.108);
 }
 
 .sidebarIcon{
@@ -92,9 +92,9 @@
 
 .sidebarListItemText{
     outline: none;
-    color: black;
-    font-size: 1.1rem;
-
+    color: rgb(9, 21, 136);
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 
