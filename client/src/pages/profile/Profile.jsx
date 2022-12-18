@@ -65,7 +65,7 @@ export default function Profile() {
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName">{user.username}
-                <img className="verifyImg" src={PF + "verify.png"} alt="Ratified User" />
+                <img className="verifyImg" src={PF + "verify.png"} alt="Ratified User" title="Ratified User ✅"/>
               </h4>
 
               <span className="profileInfoDesc">{user.desc}</span>
