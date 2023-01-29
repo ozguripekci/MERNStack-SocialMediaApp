@@ -1,8 +1,14 @@
+Dear All,
+
 This project is build with MERN Stack tools which are;
 - MongoDB
 - ExpressJS
 - ReactJS
 - NodeJs
+
+For contributions, please contact with: ozgurr.ipekci@gmail.com
+This project will be revised after 1 February 2023 baceuse of the planned working dynamics.
+Stay Tuned!
 
 =======
 Review of project:
