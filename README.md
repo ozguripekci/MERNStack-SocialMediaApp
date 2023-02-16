@@ -10,6 +10,8 @@ For contributions, please contact with: ozgurr.ipekci@gmail.com
 This project will be revised after 1 February 2023 baceuse of the planned working dynamics.
 Stay Tuned!
 
+As color pallette:  #f4b41a - #143d59 - #f2bc94 - #fff
+
 =======
 Review of project:
 
